@@ -1,0 +1,16 @@
+PODS:
+  - TOCropViewController (2.6.1)
+
+DEPENDENCIES:
+  - TOCropViewController
+
+SPEC REPOS:
+  trunk:
+    - TOCropViewController
+
+SPEC CHECKSUMS:
+  TOCropViewController: edfd4f25713d56905ad1e0b9f5be3fbe0f59c863
+
+PODFILE CHECKSUM: da3231ebdacc47a1c7784722c5e67bdfff8bdfad
+
+COCOAPODS: 1.11.3

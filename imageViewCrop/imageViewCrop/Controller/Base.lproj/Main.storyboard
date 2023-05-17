@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ohl-QL-llk">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="imageViewCrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofq-iR-Sby">
+                                <rect key="frame" x="0.0" y="59" width="393" height="360"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="fbe-OJ-Ivm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="26"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XO-QH-YEu">
+                                <rect key="frame" x="16" y="427" width="85.333333333333329" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VNa-OQ-wR6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Crop" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="CropButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m0k-c6-TOS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bn-6R-JMF">
+                                <rect key="frame" x="280.33333333333331" y="427" width="96.666666666666686" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bNd-Il-6I8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Reset" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HBk-QG-Qeu"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zhg-HE-MAj">
+                                <rect key="frame" x="16" y="486.66666666666674" width="361" height="330"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="333" id="7jL-7W-JZK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zhg-HE-MAj" secondAttribute="trailing" constant="16" id="8yY-9C-xph"/>
+                            <constraint firstItem="zhg-HE-MAj" firstAttribute="top" secondItem="1XO-QH-YEu" secondAttribute="bottom" constant="8" symbolic="YES" id="AbP-eX-z84"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5bn-6R-JMF" secondAttribute="trailing" constant="16" id="L0b-9b-Krg"/>
+                            <constraint firstItem="5bn-6R-JMF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1XO-QH-YEu" secondAttribute="trailing" constant="8" symbolic="YES" id="Nrc-hR-nBt"/>
+                            <constraint firstItem="5bn-6R-JMF" firstAttribute="top" secondItem="ofq-iR-Sby" secondAttribute="bottom" constant="8" symbolic="YES" id="Ow0-w9-FDe"/>
+                            <constraint firstItem="1XO-QH-YEu" firstAttribute="top" secondItem="ofq-iR-Sby" secondAttribute="bottom" constant="8" symbolic="YES" id="bwj-gj-oG3"/>
+                            <constraint firstItem="ofq-iR-Sby" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cGg-3j-9N8"/>
+                            <constraint firstItem="1XO-QH-YEu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kT4-Lq-pw9"/>
+                            <constraint firstItem="ofq-iR-Sby" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kiz-UG-SUy"/>
+                            <constraint firstItem="ofq-iR-Sby" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mNV-vZ-7xz"/>
+                            <constraint firstItem="zhg-HE-MAj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="t3L-53-LKv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cropView" destination="ofq-iR-Sby" id="pCH-tK-T3F"/>
+                        <outlet property="imageView" destination="zhg-HE-MAj" id="QS5-m1-yzn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="-118"/>
+        </scene>
+        <!--SelectVC-->
+        <scene sceneID="t2i-lC-vd5">
+            <objects>
+                <viewController storyboardIdentifier="SelectVC" id="Ohl-QL-llk" customClass="SelectVC" customModule="imageViewCrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RRC-lj-StD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJN-Oc-Yt0">
+                                <rect key="frame" x="161.66666666666666" y="408.66666666666669" width="70" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="select"/>
+                                <connections>
+                                    <action selector="onClickCamera:" destination="Ohl-QL-llk" eventType="touchUpInside" id="ULd-8P-NrQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mgk-PJ-o2Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tJN-Oc-Yt0" firstAttribute="centerY" secondItem="RRC-lj-StD" secondAttribute="centerY" id="UO9-xL-wAS"/>
+                            <constraint firstItem="tJN-Oc-Yt0" firstAttribute="centerX" secondItem="RRC-lj-StD" secondAttribute="centerX" id="YjP-YP-5nU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7oo-KN-4O9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="-118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="26" width="1920" height="1440"/>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
